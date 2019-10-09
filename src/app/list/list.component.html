@@ -1,0 +1,27 @@
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Address</th>
+            <th scope="col">Phone</th>
+            
+        </tr>
+    </thead>
+    <tbody *ngIf="books.length>0">
+        <tr *ngFor="let book of books">
+            <th scope="row">{{book.id}}</th>
+            <td>{{book.name}}</td>
+            <td>{{book.age}}</td>
+            <td>{{book.address}}</td>
+            <td>{{book.phone}}</td>
+           
+            <td>
+                <a routerLink="/edit/{{book.id}}" class="btn btn-sm btn-dark">Edit</a> | 
+                <a routerLink="/delete/{{book.id}}" class="btn btn-sm btn-danger">Delete</a>
+              </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+        <tr>
+           
+            <th scope="col">Degree</th>
+            <th scope="col">Stream</th>
+            <th scope="col">CGPA</th>
+            <th scope="col">College</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="books.length>0">
+        <tr *ngFor="let book of books">
+            <th scope="row">{{book.degree}}</th>
+            <td>{{book.stream}}</td>
+            <td>{{book.cgpa}}</td>
+            <td>{{book.college}}</td>
+            <td>
+                <a routerLink="/edit/{{book.id}}" class="btn btn-sm btn-dark">Edit</a> | 
+                <a routerLink="/delete/{{book.id}}" class="btn btn-sm btn-danger">Delete</a>
+              </td>
+        </tr>
+    </tbody>
+</table>
